@@ -28,7 +28,7 @@ def make_facies_log_plot(logs, facies_colors):
     divider = make_axes_locatable(ax[5])
     cax = divider.append_axes("right", size="20%", pad=0.05)
     cbar=plt.colorbar(im, cax=cax)
-    cbar.set_label((12*' ').join([' SS ', 'CSiS', 'FSiS',
+    cbar.set_label((17*' ').join([' SS ', 'CSiS', 'FSiS',
                                 'SiSh', ' MS ', ' WS ', ' D  ',
                                 ' PS ', ' BS ']))
     cbar.set_ticks(range(0,1)); cbar.set_ticklabels('')
@@ -55,5 +55,3 @@ def make_facies_log_plot(logs, facies_colors):
     ax[4].set_yticklabels([]); ax[5].set_yticklabels([])
     ax[5].set_xticklabels([])
     fig.suptitle('Well: %s'%logs.index[0], fontsize=14,y=0.94)
-
-    fig.show()
